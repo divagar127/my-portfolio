@@ -59,7 +59,7 @@ export function Contact() {
             setSending(true);
             const formEl = e.currentTarget;
             const formData = new FormData(formEl);
-            formData.append("access_key", "37d0027f-2bb7-4867-b79e-dab39a8ba257");
+            formData.append("access_key", import.meta.env.VITE_WEB3FORMS_ACCESS_KEY);
             formData.append("from_name", "Portfolio Contact Form");
             formData.append("subject", (formData.get("subject") as string) || "New message from portfolio");
             try {
